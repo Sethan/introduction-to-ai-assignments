@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.PhongMaterial?>
+<?import javafx.scene.shape.MeshView?>
+<?import javafx.scene.shape.TriangleMesh?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="627.0" prefWidth="1028.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.Controls">
+   <children>
+      <BorderPane layoutX="156.0" layoutY="14.0" prefHeight="627.0" prefWidth="1028.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" >
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Load" onAction="#loadEvent" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <bottom>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="43.0" prefWidth="1028.0" spacing="20.0" style="-fx-background-color: FFFF;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button depthTest="DISABLE" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" text="Start" textFill="#3c3c3c" underline="true" fx:id="startBtn" onAction="#startButton">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="79.0" text="Stop" textFill="#3c3c3c" fx:id="stopBtn" onAction="#stopButton" >
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Bernard MT Condensed" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="89.0" text="Reset" textFill="#3c3c3c" fx:id="resetBtn" onAction="#resetButton">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+            </HBox>
+         </bottom>
+         <center>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Canvas height="550.0" width="1028.0" fx:id="mainCanvas" onMouseClicked="#canvasClick" />
+               </children>
+               
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
